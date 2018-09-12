@@ -18,5 +18,7 @@ Usaremos # para describir los comandos que se usaran con superusuario.
 
 $ bash reset_db.sh
 
+$ python manage.py runserver
+
 ## Captura
 ![captura-1.png](captura-1.png "captura-1.png")
