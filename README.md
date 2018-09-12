@@ -1,4 +1,4 @@
-# Sistema que permite generar graficos a partir de un valor porcentual.
+# Sistema que permite generar un gráfico de barra de progreso porcentual a partir de un valor.
 
 Autor: Ing. Argenis Osorio
 
