@@ -4,11 +4,14 @@
 <h1>Lista de Actividades</h1>
 {% for actividad in object_list %}
 <div class="well well-white">
-  <h4>Nombre de la actividad:</h4>{{ actividad.nombre }}
+  <b>Nombre de la actividad:</b> {{ actividad.nombre }}
   <br />
-  <br />
-  <h4>Avance (%):</h4>{{ actividad.avance }}
-  <br />
+  <b>Avance (%):</b>
+  {{ actividad.avance }} %
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" aria-valuenow="{{ actividad.avance }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ actividad.avance }}%;">
+    </div>
+  </div>
   <hr />
   <a href="{% url 'registro:editar' actividad.id %}">Editar</a> |
   <a href="{% url 'registro:borrar' actividad.id %}">Borrar</a>

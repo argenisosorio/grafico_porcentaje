@@ -3,7 +3,14 @@
 {% block cuerpo %}
 <h1>Registrar Actividad</h1>
 <form method="post">{% csrf_token %}
-  {{ form.as_p }}
+  <b>Nombre:</b>
+  {{ form.nombre }}
+  <br />
+  <br />
+  <b>Avance(%):</b>
+  {{ form.avance }}
+  <br />
+  <br />
   <input type="submit" value="Registrar" />
 </form>
 {% endblock %}
