@@ -1,0 +1,9 @@
+{% extends "registro/base.html" %}
+{% block titulo %}Borrar actividad{% endblock %}
+{% block cuerpo %}
+<h1>Borrar Actividad</h1>
+<form method="post">{% csrf_token %}
+  ¿Está seguro que desea eliminar a "{{ object }}"?
+  <input type="submit" value="Submit" />
+</form>
+{% endblock %}

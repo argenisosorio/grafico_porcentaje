@@ -1,0 +1,9 @@
+{% extends "registro/base.html" %}
+{% block titulo %}Registrar actividad{% endblock %}
+{% block cuerpo %}
+<h1>Registrar Actividad</h1>
+<form method="post">{% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit" value="Registrar" />
+</form>
+{% endblock %}

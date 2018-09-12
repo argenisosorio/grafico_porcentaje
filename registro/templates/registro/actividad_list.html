@@ -1,0 +1,17 @@
+{% extends "registro/base.html" %}
+{% block titulo %}Lista de Actividades{% endblock %}
+{% block cuerpo %}
+<h1>Lista de Actividades</h1>
+{% for actividad in object_list %}
+<div class="well well-white">
+  <h4>Nombre de la actividad:</h4>{{ actividad.nombre }}
+  <br />
+  <br />
+  <h4>Avance (%):</h4>{{ actividad.avance }}
+  <br />
+  <hr />
+  <a href="{% url 'registro:editar' actividad.id %}">Editar</a> |
+  <a href="{% url 'registro:borrar' actividad.id %}">Borrar</a>
+</div>
+{% endfor %}
+{% endblock %}
