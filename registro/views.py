@@ -3,25 +3,25 @@ from django.http import HttpResponse
 from django.views.generic import TemplateView,ListView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.core.urlresolvers import reverse_lazy
-from registro.models import Actividad
+from registro.models import Proyecto
 
 
 class Consultar(ListView):
-    model = Actividad
+    model = Proyecto
 
 
 class Registrar(CreateView):
-    model = Actividad
+    model = Proyecto
     fields = ['nombre', 'avance']
     success_url = reverse_lazy('registro:consultar')
 
 
 class Editar(UpdateView):
-    model = Actividad
+    model = Proyecto
     fields = ['nombre', 'avance']
     success_url = reverse_lazy('registro:consultar')
 
 
 class Borrar(DeleteView):
-    model = Actividad
+    model = Proyecto
     success_url = reverse_lazy('registro:consultar')

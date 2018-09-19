@@ -1,0 +1,29 @@
+{% extends "registro/base.html" %}
+{% block titulo %}Lista de Proyectos{% endblock %}
+{% block cuerpo %}
+<h1>Lista de Proyectos</h1>
+{% if object_list %}
+  {% for proyecto in object_list %}
+  <div class="well well-white">
+    <b>Nombre del proyecto:</b> {{ proyecto.nombre }}
+    <br />
+    <b>Avance (%):</b>
+    {{ proyecto.avance }} %
+    <div class="progress">
+      <div class="progress-bar" role="progressbar" aria-valuenow="{{ proyecto.avance }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ proyecto.avance }}%;">
+      </div>
+    </div>
+    <hr />
+    <a href="{% url 'registro:editar' proyecto.id %}">
+      <button class="btn btn-info">Editar</button>
+    </a>
+    <a href="{% url 'registro:borrar' proyecto.id %}">
+      <button class="btn btn-danger">Borrar</button>
+    </a>
+  </div>
+  {% endfor %}
+  {% else %}
+    <br />
+    <b>No hay proyectos registrados aún</b>
+  {% endif %}
+{% endblock %}

@@ -3,7 +3,7 @@ from django.db import models
 from django.core.urlresolvers import reverse
 
 
-class Actividad(models.Model):
+class Proyecto(models.Model):
     nombre = models.CharField(max_length=200)
     avance = models.CharField(max_length=8)
 

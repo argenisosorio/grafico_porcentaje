@@ -1,0 +1,16 @@
+{% extends "registro/base.html" %}
+{% block titulo %}Registrar proyecto{% endblock %}
+{% block cuerpo %}
+<h1>Registrar proyecto</h1>
+<form method="post">{% csrf_token %}
+  <b>Nombre:</b>
+  {{ form.nombre }}
+  <br />
+  <br />
+  <b>Avance(%):</b>
+  {{ form.avance }}
+  <br />
+  <br />
+  <button class="btn btn-success" type="submit">Guardar</button>
+</form>
+{% endblock %}
