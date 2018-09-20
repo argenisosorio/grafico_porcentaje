@@ -23,3 +23,11 @@ body {
 .well-white {
 	background: #FFFFFF !important;
 }
+
+ul.errorlist {
+  border-left: 4px solid red !important;
+  border: ridge 1px #ff5100;
+  background: #ffafaf;
+  border-radius: 3px;
+  list-style: none outside none;
+}

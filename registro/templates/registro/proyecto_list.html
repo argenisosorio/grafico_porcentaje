@@ -7,10 +7,16 @@
   <div class="well well-white">
     <b>Nombre del proyecto:</b> {{ proyecto.nombre }}
     <br />
-    <b>Avance (%):</b>
-    {{ proyecto.avance }} %
+    <br />
+    <b>Actividad 1 - Avance:</b> {{ proyecto.actividad_1 }} %
+    <br />
+    <b>Actividad 2 - Avance:</b> {{ proyecto.actividad_2 }} %
+    <br />
+    <br />
+    <b>Avance total:</b>
+    {{ proyecto.total }} %
     <div class="progress">
-      <div class="progress-bar" role="progressbar" aria-valuenow="{{ proyecto.avance }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ proyecto.avance }}%;">
+      <div class="progress-bar" role="progressbar" aria-valuenow="{{ proyecto.total }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ proyecto.total }}%;">
       </div>
     </div>
     <hr />

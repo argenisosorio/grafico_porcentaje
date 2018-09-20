@@ -2,13 +2,27 @@
 {% block titulo %}Registrar proyecto{% endblock %}
 {% block cuerpo %}
 <h1>Registrar proyecto</h1>
+<br />
 <form method="post">{% csrf_token %}
-  <b>Nombre:</b>
+  <b>{{ form.nombre.label }}</b>
   {{ form.nombre }}
+  {% if form.nombre.errors %}
+    <p>{{ form.nombre.errors}}</p>
+  {% endif %}
   <br />
   <br />
-  <b>Avance(%):</b>
-  {{ form.avance }}
+  <b>{{ form.actividad_1.label }}</b>
+  {{ form.actividad_1 }}
+  {% if form.actividad_1.errors %}
+    <p>{{ form.actividad_1.errors}}</p>
+  {% endif %}
+  <br />
+  <br />
+  <b>{{ form.actividad_2.label }}</b>
+  {{ form.actividad_2 }}
+  {% if form.actividad_2.errors %}
+    <p>{{ form.actividad_2.errors}}</p>
+  {% endif %}
   <br />
   <br />
   <button class="btn btn-success" type="submit">Guardar</button>
