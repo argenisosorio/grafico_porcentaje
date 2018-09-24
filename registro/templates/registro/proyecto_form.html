@@ -4,25 +4,316 @@
 <h1>Registrar proyecto</h1>
 <br />
 <form method="post">{% csrf_token %}
-  <b>{{ form.nombre.label }}</b>
-  {{ form.nombre }}
-  {% if form.nombre.errors %}
-    <p>{{ form.nombre.errors}}</p>
+
+  <b>{{ form.nombre_proyecto.label }}</b>
+  {{ form.nombre_proyecto }}
+  {% if form.nombre_proyecto.errors %}
+    <p>{{ form.nombre_proyecto.errors}}</p>
   {% endif %}
   <br />
   <br />
-  <b>{{ form.actividad_1.label }}</b>
-  {{ form.actividad_1 }}
-  {% if form.actividad_1.errors %}
-    <p>{{ form.actividad_1.errors}}</p>
-  {% endif %}
+
+  <div class="row">
+    <div class="col-sm-6">
+      <b>{{ form.nombre_caravisible.label }}</b>
+      {{ form.nombre_caravisible }}
+      {% if form.nombre_caravisible.errors %}
+        <p>{{ form.nombre_caravisible.errors}}</p>
+      {% endif %}
+    </div>
+    <div class="col-sm-6">
+      <b>{{ form.nombre_director.label }}</b>
+      {{ form.nombre_director }}
+      {% if form.nombre_director.errors %}
+        <p>{{ form.nombre_director.errors}}</p>
+      {% endif %}
+    </div>
+  </div>
+
   <br />
-  <br />
-  <b>{{ form.actividad_2.label }}</b>
-  {{ form.actividad_2 }}
-  {% if form.actividad_2.errors %}
-    <p>{{ form.actividad_2.errors}}</p>
-  {% endif %}
+
+  <div class="row">
+    <div class="col-sm-3">
+      <b>{{ form.nombre_act_1.label }}</b>
+      {{ form.nombre_act_1 }}
+      {% if form.nombre_act_1.errors %}
+        <p>{{ form.nombre_act_1.errors}}</p>
+      {% endif %}
+      <br />
+      <br />
+      <b>{{ form.nombre_act_2.label }}</b>
+      {{ form.nombre_act_2 }}
+      {% if form.nombre_act_2.errors %}
+        <p>{{ form.nombre_act_2.errors}}</p>
+      {% endif %}
+      <br />
+      <br />
+      <b>{{ form.nombre_act_3.label }}</b>
+      {{ form.nombre_act_3 }}
+      {% if form.nombre_act_3.errors %}
+        <p>{{ form.nombre_act_3.errors}}</p>
+      {% endif %}
+      <br />
+      <br />
+      <b>{{ form.nombre_act_4.label }}</b>
+      {{ form.nombre_act_4 }}
+      {% if form.nombre_act_4.errors %}
+        <p>{{ form.nombre_act_4.errors}}</p>
+      {% endif %}
+      <br />
+      <br />
+      <b>{{ form.nombre_act_5.label }}</b>
+      {{ form.nombre_act_5 }}
+      {% if form.nombre_act_5.errors %}
+        <p>{{ form.nombre_act_5.errors}}</p>
+      {% endif %}
+      <br />
+      <br />
+      <b>{{ form.nombre_act_6.label }}</b>
+      {{ form.nombre_act_6 }}
+      {% if form.nombre_act_6.errors %}
+        <p>{{ form.nombre_act_6.errors}}</p>
+      {% endif %}
+      <br />
+      <br />
+      <b>{{ form.nombre_act_7.label }}</b>
+      {{ form.nombre_act_7 }}
+      {% if form.nombre_act_7.errors %}
+        <p>{{ form.nombre_act_7.errors}}</p>
+      {% endif %}
+      <br />
+      <br />
+      <b>{{ form.nombre_act_8.label }}</b>
+      {{ form.nombre_act_8 }}
+      {% if form.nombre_act_8.errors %}
+        <p>{{ form.nombre_act_8.errors}}</p>
+      {% endif %}
+      <br />
+      <br />
+      <b>{{ form.nombre_act_9.label }}</b>
+      {{ form.nombre_act_9 }}
+      {% if form.nombre_act_9.errors %}
+        <p>{{ form.nombre_act_9.errors}}</p>
+      {% endif %}
+      <br />
+      <br />
+      <b>{{ form.nombre_act_10.label }}</b>
+      {{ form.nombre_act_10 }}
+      {% if form.nombre_act_10.errors %}
+        <p>{{ form.nombre_act_10.errors}}</p>
+      {% endif %}
+    </div>
+    <div class="col-sm-3">
+      <b>{{ form.fecha_entrega_act_1.label }}</b>
+      {{ form.fecha_entrega_act_1 }}
+      {% if form.fecha_entrega_act_1.errors %}
+        <p>{{ form.fecha_entrega_act_1.errors}}</p>
+      {% endif %}
+      <br />
+      <br />
+      <b>{{ form.fecha_entrega_act_2.label }}</b>
+      {{ form.fecha_entrega_act_2 }}
+      {% if form.fecha_entrega_act_2.errors %}
+        <p>{{ form.fecha_entrega_act_2.errors}}</p>
+      {% endif %}
+      <br />
+      <br />
+      <b>{{ form.fecha_entrega_act_3.label }}</b>
+      {{ form.fecha_entrega_act_3 }}
+      {% if form.fecha_entrega_act_3.errors %}
+        <p>{{ form.fecha_entrega_act_3.errors}}</p>
+      {% endif %}
+      <br />
+      <br />
+      <b>{{ form.fecha_entrega_act_4.label }}</b>
+      {{ form.fecha_entrega_act_4 }}
+      {% if form.fecha_entrega_act_4.errors %}
+        <p>{{ form.fecha_entrega_act_4.errors}}</p>
+      {% endif %}
+      <br />
+      <br />
+      <b>{{ form.fecha_entrega_act_5.label }}</b>
+      {{ form.fecha_entrega_act_5 }}
+      {% if form.fecha_entrega_act_5.errors %}
+        <p>{{ form.fecha_entrega_act_5.errors}}</p>
+      {% endif %}
+      <br />
+      <br />
+      <b>{{ form.fecha_entrega_act_6.label }}</b>
+      {{ form.fecha_entrega_act_6 }}
+      {% if form.fecha_entrega_act_6.errors %}
+        <p>{{ form.fecha_entrega_act_6.errors}}</p>
+      {% endif %}
+      <br />
+      <br />
+      <b>{{ form.fecha_entrega_act_7.label }}</b>
+      {{ form.fecha_entrega_act_7 }}
+      {% if form.fecha_entrega_act_7.errors %}
+        <p>{{ form.fecha_entrega_act_7.errors}}</p>
+      {% endif %}
+      <br />
+      <br />
+      <b>{{ form.fecha_entrega_act_8.label }}</b>
+      {{ form.fecha_entrega_act_8 }}
+      {% if form.fecha_entrega_act_8.errors %}
+        <p>{{ form.fecha_entrega_act_8.errors}}</p>
+      {% endif %}
+      <br />
+      <br />
+      <b>{{ form.fecha_entrega_act_9.label }}</b>
+      {{ form.fecha_entrega_act_9 }}
+      {% if form.fecha_entrega_act_9.errors %}
+        <p>{{ form.fecha_entrega_act_9.errors}}</p>
+      {% endif %}
+      <br />
+      <br />
+      <b>{{ form.fecha_entrega_act_10.label }}</b>
+      {{ form.fecha_entrega_act_10 }}
+      {% if form.fecha_entrega_act_10.errors %}
+        <p>{{ form.fecha_entrega_act_10.errors}}</p>
+      {% endif %}
+    </div>
+    <div class="col-sm-3">
+      <b>{{ form.porc_act_1.label }}</b>
+      {{ form.porc_act_1 }}
+      {% if form.porc_act_1.errors %}
+        <p>{{ form.porc_act_1.errors}}</p>
+      {% endif %}
+      <br />
+      <br />
+      <b>{{ form.porc_act_2.label }}</b>
+      {{ form.porc_act_2 }}
+      {% if form.porc_act_2.errors %}
+        <p>{{ form.porc_act_2.errors}}</p>
+      {% endif %}
+      <br />
+      <br />
+      <b>{{ form.porc_act_3.label }}</b>
+      {{ form.porc_act_3 }}
+      {% if form.porc_act_3.errors %}
+        <p>{{ form.porc_act_3.errors}}</p>
+      {% endif %}
+      <br />
+      <br />
+      <b>{{ form.porc_act_4.label }}</b>
+      {{ form.porc_act_4 }}
+      {% if form.porc_act_4.errors %}
+        <p>{{ form.porc_act_4.errors}}</p>
+      {% endif %}
+      <br />
+      <br />
+      <b>{{ form.porc_act_5.label }}</b>
+      {{ form.porc_act_5 }}
+      {% if form.porc_act_5.errors %}
+        <p>{{ form.porc_act_5.errors}}</p>
+      {% endif %}
+      <br />
+      <br />
+      <b>{{ form.porc_act_6.label }}</b>
+      {{ form.porc_act_6 }}
+      {% if form.porc_act_6.errors %}
+        <p>{{ form.porc_act_6.errors}}</p>
+      {% endif %}
+      <br />
+      <br />
+      <b>{{ form.porc_act_7.label }}</b>
+      {{ form.porc_act_7 }}
+      {% if form.porc_act_7.errors %}
+        <p>{{ form.porc_act_7.errors}}</p>
+      {% endif %}
+      <br />
+      <br />
+      <b>{{ form.porc_act_8.label }}</b>
+      {{ form.porc_act_8 }}
+      {% if form.porc_act_8.errors %}
+        <p>{{ form.porc_act_8.errors}}</p>
+      {% endif %}
+      <br />
+      <br />
+      <b>{{ form.porc_act_9.label }}</b>
+      {{ form.porc_act_9 }}
+      {% if form.porc_act_9.errors %}
+        <p>{{ form.porc_act_9.errors}}</p>
+      {% endif %}
+      <br />
+      <br />
+      <b>{{ form.porc_act_10.label }}</b>
+      {{ form.porc_act_10 }}
+      {% if form.porc_act_10.errors %}
+        <p>{{ form.porc_act_10.errors}}</p>
+      {% endif %}
+    </div>
+    <div class="col-sm-3">
+      <b>{{ form.porc_avan_act_1.label }}</b>
+      {{ form.porc_avan_act_1 }}
+      {% if form.porc_avan_act_1.errors %}
+        <p>{{ form.porc_avan_act_1.errors}}</p>
+      {% endif %}
+      <br />
+      <br />
+      <b>{{ form.porc_avan_act_2.label }}</b>
+      {{ form.porc_avan_act_2 }}
+      {% if form.porc_avan_act_2.errors %}
+        <p>{{ form.porc_avan_act_2.errors}}</p>
+      {% endif %}
+      <br />
+      <br />
+      <b>{{ form.porc_avan_act_3.label }}</b>
+      {{ form.porc_avan_act_3 }}
+      {% if form.porc_avan_act_3.errors %}
+        <p>{{ form.porc_avan_act_3.errors}}</p>
+      {% endif %}
+      <br />
+      <br />
+      <b>{{ form.porc_avan_act_4.label }}</b>
+      {{ form.porc_avan_act_4 }}
+      {% if form.porc_avan_act_4.errors %}
+        <p>{{ form.porc_avan_act_4.errors}}</p>
+      {% endif %}
+      <br />
+      <br />
+      <b>{{ form.porc_avan_act_5.label }}</b>
+      {{ form.porc_avan_act_5 }}
+      {% if form.porc_avan_act_5.errors %}
+        <p>{{ form.porc_avan_act_5.errors}}</p>
+      {% endif %}
+      <br />
+      <br />
+      <b>{{ form.porc_avan_act_6.label }}</b>
+      {{ form.porc_avan_act_6 }}
+      {% if form.porc_avan_act_6.errors %}
+        <p>{{ form.porc_avan_act_6.errors}}</p>
+      {% endif %}
+      <br />
+      <br />
+      <b>{{ form.porc_avan_act_7.label }}</b>
+      {{ form.porc_avan_act_7 }}
+      {% if form.porc_avan_act_7.errors %}
+        <p>{{ form.porc_avan_act_7.errors}}</p>
+      {% endif %}
+      <br />
+      <br />
+      <b>{{ form.porc_avan_act_8.label }}</b>
+      {{ form.porc_avan_act_8 }}
+      {% if form.porc_avan_act_8.errors %}
+        <p>{{ form.porc_avan_act_8.errors}}</p>
+      {% endif %}
+      <br />
+      <br />
+      <b>{{ form.porc_avan_act_9.label }}</b>
+      {{ form.porc_avan_act_9 }}
+      {% if form.porc_avan_act_9.errors %}
+        <p>{{ form.porc_avan_act_9.errors}}</p>
+      {% endif %}
+      <br />
+      <br />
+      <b>{{ form.porc_avan_act_10.label }}</b>
+      {{ form.porc_avan_act_10 }}
+      {% if form.porc_avan_act_10.errors %}
+        <p>{{ form.porc_avan_act_10.errors}}</p>
+      {% endif %}
+    </div>
+  </div>
   <br />
   <br />
   <button class="btn btn-success" type="submit">Guardar</button>

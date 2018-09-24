@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from django.http import HttpResponse
-from django.views.generic import TemplateView,ListView
+from django.views.generic import TemplateView, ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.core.urlresolvers import reverse_lazy
 from registro.models import Proyecto
@@ -38,3 +38,10 @@ class Borrar(DeleteView):
     """
     model = Proyecto
     success_url = reverse_lazy('registro:consultar')
+
+class Detallar(DetailView):
+    """
+    Clase que muestra la lista de entradas de la bitácora
+    """
+    model = Proyecto
+    template_name = "registro/proyecto_detail.html"

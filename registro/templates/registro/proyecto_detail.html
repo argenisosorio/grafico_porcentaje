@@ -1,0 +1,217 @@
+{% extends "registro/base.html" %}
+{% block titulo %}Detalle del proyecto{% endblock %}
+{% block cuerpo %}
+<h1>Detalle del Proyecto</h1>
+<br />
+
+<br />
+  
+<div class="row">
+  <div class="col-sm-6">
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <b>Nombre del Proyecto</b>
+        </h3>
+      </div>
+      <div class="panel-body">
+        {{ proyecto.nombre_proyecto }}
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="col-sm-6">
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <b>Nombre del Director</b>
+        </h3>
+      </div>
+      <div class="panel-body">
+        {{ proyecto.nombre_director }}
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<table class="tabla_trabajadores" border="1px" style="width:100%">
+  <thead>
+    <tr>
+      <th><b>N</b></th>
+      <th><b>Actividad</b></th>
+      <th><b>Fecha de Entrega</b></th>
+      <th><b>Porcentaje</b></th>
+      <th><b>Porcentaje avance</b></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>
+        {{ proyecto.nombre_act_1 }}
+      </td>
+      <td>
+        {{ proyecto.fecha_entrega_act_1 }}
+      </td>
+      <td>
+        {{ proyecto.porc_act_1 }}
+      </td>
+      <td>
+        {{ proyecto.porc_avan_act_1 }}
+      </td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>
+        {{ proyecto.nombre_act_2 }}
+      </td>
+      <td>
+        {{ proyecto.fecha_entrega_act_2 }}
+      </td>
+      <td>
+        {{ proyecto.porc_act_2 }}
+      </td>
+      <td>
+        {{ proyecto.porc_avan_act_2 }}
+      </td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>
+        {{ proyecto.nombre_act_3 }}
+      </td>
+      <td>
+        {{ proyecto.fecha_entrega_act_3 }}
+      </td>
+      <td>
+        {{ proyecto.porc_act_3 }}
+      </td>
+      <td>
+        {{ proyecto.porc_avan_act_3 }}
+      </td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>
+        {{ proyecto.nombre_act_4 }}
+      </td>
+      <td>
+        {{ proyecto.fecha_entrega_act_4 }}
+      </td>
+      <td>
+        {{ proyecto.porc_act_4 }}
+      </td>
+      <td>
+        {{ proyecto.porc_avan_act_4 }}
+      </td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>
+        {{ proyecto.nombre_act_5 }}
+      </td>
+      <td>
+        {{ proyecto.fecha_entrega_act_5 }}
+      </td>
+      <td>
+        {{ proyecto.porc_act_5 }}
+      </td>
+      <td>
+        {{ proyecto.porc_avan_act_5 }}
+      </td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>
+        {{ proyecto.nombre_act_6 }}
+      </td>
+      <td>
+        {{ proyecto.fecha_entrega_act_6 }}
+      </td>
+      <td>
+        {{ proyecto.porc_act_6 }}
+      </td>
+      <td>
+        {{ proyecto.porc_avan_act_6 }}
+      </td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>
+        {{ proyecto.nombre_act_7 }}
+      </td>
+      <td>
+        {{ proyecto.fecha_entrega_act_7 }}
+      </td>
+      <td>
+        {{ proyecto.porc_act_7 }}
+      </td>
+      <td>
+        {{ proyecto.porc_avan_act_7 }}
+      </td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>
+        {{ proyecto.nombre_act_8 }}
+      </td>
+      <td>
+        {{ proyecto.fecha_entrega_act_8 }}
+      </td>
+      <td>
+        {{ proyecto.porc_act_8 }}
+      </td>
+      <td>
+        {{ proyecto.porc_avan_act_8 }}
+      </td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>
+        {{ proyecto.nombre_act_9 }}
+      </td>
+      <td>
+        {{ proyecto.fecha_entrega_act_9 }}
+      </td>
+      <td>
+        {{ proyecto.porc_act_9 }}
+      </td>
+      <td>
+        {{ proyecto.porc_avan_act_9 }}
+      </td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>
+        {{ proyecto.nombre_act_10 }}
+      </td>
+      <td>
+        {{ proyecto.fecha_entrega_act_10 }}
+      </td>
+      <td>
+        {{ proyecto.porc_act_10 }}
+      </td>
+      <td>
+        {{ proyecto.porc_avan_act_10 }}
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br />
+<b>Porcentaje avance</b>: {{ proyecto.sumatoria_por_avan }} %
+<div class="progress">
+  <div class="progress-bar" role="progressbar" aria-valuenow="{{ proyecto.sumatoria_por_avan }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ proyecto.sumatoria_por_avan }}%;">
+  </div>
+</div>
+<hr />
+<a href="{% url 'registro:editar' proyecto.id %}">
+  <button class="btn btn-info">Editar</button>
+</a>
+<a href="{% url 'registro:borrar' proyecto.id %}">
+  <button class="btn btn-danger">Borrar</button>
+</a>
+{% endblock %}

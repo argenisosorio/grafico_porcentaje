@@ -5,18 +5,11 @@
 {% if object_list %}
   {% for proyecto in object_list %}
   <div class="well well-white">
-    <b>Nombre del proyecto:</b> {{ proyecto.nombre }}
+    <b>Nombre del proyecto:</b> {{ proyecto.nombre_proyecto }}
     <br />
-    <br />
-    <b>Actividad 1 - Avance:</b> {{ proyecto.actividad_1 }} %
-    <br />
-    <b>Actividad 2 - Avance:</b> {{ proyecto.actividad_2 }} %
-    <br />
-    <br />
-    <b>Avance total:</b>
-    {{ proyecto.total }} %
+    <b>Porcentaje avance</b>: {{ proyecto.sumatoria_por_avan }} %
     <div class="progress">
-      <div class="progress-bar" role="progressbar" aria-valuenow="{{ proyecto.total }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ proyecto.total }}%;">
+      <div class="progress-bar" role="progressbar" aria-valuenow="{{ proyecto.sumatoria_por_avan }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ proyecto.sumatoria_por_avan }}%;">
       </div>
     </div>
     <hr />
@@ -25,6 +18,9 @@
     </a>
     <a href="{% url 'registro:borrar' proyecto.id %}">
       <button class="btn btn-danger">Borrar</button>
+    </a>
+    <a href="{% url 'registro:detallar' proyecto.id %}">
+      <button class="btn btn-primary">Detallar</button>
     </a>
   </div>
   {% endfor %}

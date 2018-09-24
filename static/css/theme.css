@@ -31,3 +31,18 @@ ul.errorlist {
   border-radius: 3px;
   list-style: none outside none;
 }
+
+.tabla_trabajadores, th, td {
+  border: 1px solid lightgray;
+  background-color: #FFFFFF;
+}
+.tabla_trabajadores th{
+  padding: 15px;
+  text-align: center;
+  /*background-color: #d9edf7;*/
+  /*color: #31708f;*/
+}
+.tabla_trabajadores td {
+  padding: 10px;
+  text-align: center;
+}
