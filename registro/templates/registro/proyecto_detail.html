@@ -2,10 +2,9 @@
 {% block titulo %}Detalle del proyecto{% endblock %}
 {% block cuerpo %}
 <h1>Detalle del Proyecto</h1>
-<br />
 
 <br />
-  
+
 <div class="row">
   <div class="col-sm-6">
 
@@ -19,10 +18,6 @@
         {{ proyecto.nombre_proyecto }}
       </div>
     </div>
-    
-  </div>
-
-  <div class="col-sm-6">
 
     <div class="panel panel-default">
       <div class="panel-heading">
@@ -35,24 +30,79 @@
       </div>
     </div>
 
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <b>Integrantes del equipo</b>
+        </h3>
+      </div>
+      <div class="panel-body">
+        {{ proyecto.integrantes_equipo }}
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="col-sm-6">
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <b>Año de ejecución</b>
+        </h3>
+      </div>
+      <div class="panel-body">
+        {{ proyecto.ano_ejecucion }}
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <b>Nombre del Cara Visible</b>
+        </h3>
+      </div>
+      <div class="panel-body">
+        {{ proyecto.nombre_caravisible }}
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <b>Fecha de entrega</b>
+        </h3>
+      </div>
+      <div class="panel-body">
+        {{ proyecto.fecha_entrega_proyecto }}
+      </div>
+    </div>
+
   </div>
 </div>
+
+<h3>Lista de actividades</h3>
 
 <table class="tabla_trabajadores" border="1px" style="width:100%">
   <thead>
     <tr>
       <th><b>N</b></th>
       <th><b>Actividad</b></th>
-      <th><b>Fecha de Entrega</b></th>
-      <th><b>Porcentaje</b></th>
+      <th><b>Responsable</b></th>
+      <th><b>Fecha de entrega</b></th>
+      <th><b>Porcentaje de la actividad</b></th>
       <th><b>Porcentaje avance</b></th>
     </tr>
   </thead>
   <tbody>
+    {% if proyecto.nombre_act_1 %}
     <tr>
       <td>1</td>
       <td>
         {{ proyecto.nombre_act_1 }}
+      </td>
+      <td>
+        {{ proyecto.resp_act_1 }}
       </td>
       <td>
         {{ proyecto.fecha_entrega_act_1 }}
@@ -64,10 +114,15 @@
         {{ proyecto.porc_avan_act_1 }}
       </td>
     </tr>
+    {% endif %}
+    {% if proyecto.nombre_act_2 %}
     <tr>
       <td>2</td>
       <td>
         {{ proyecto.nombre_act_2 }}
+      </td>
+      <td>
+        {{ proyecto.resp_act_2 }}
       </td>
       <td>
         {{ proyecto.fecha_entrega_act_2 }}
@@ -79,10 +134,15 @@
         {{ proyecto.porc_avan_act_2 }}
       </td>
     </tr>
+    {% endif %}
+    {% if proyecto.nombre_act_3 %}
     <tr>
       <td>3</td>
       <td>
         {{ proyecto.nombre_act_3 }}
+      </td>
+      <td>
+        {{ proyecto.resp_act_3 }}
       </td>
       <td>
         {{ proyecto.fecha_entrega_act_3 }}
@@ -94,10 +154,15 @@
         {{ proyecto.porc_avan_act_3 }}
       </td>
     </tr>
+    {% endif %}
+    {% if proyecto.nombre_act_4 %}
     <tr>
       <td>4</td>
       <td>
         {{ proyecto.nombre_act_4 }}
+      </td>
+      <td>
+        {{ proyecto.resp_act_4 }}
       </td>
       <td>
         {{ proyecto.fecha_entrega_act_4 }}
@@ -109,10 +174,15 @@
         {{ proyecto.porc_avan_act_4 }}
       </td>
     </tr>
+    {% endif %}
+    {% if proyecto.nombre_act_5 %}
     <tr>
       <td>5</td>
       <td>
         {{ proyecto.nombre_act_5 }}
+      </td>
+      <td>
+        {{ proyecto.resp_act_5 }}
       </td>
       <td>
         {{ proyecto.fecha_entrega_act_5 }}
@@ -124,10 +194,15 @@
         {{ proyecto.porc_avan_act_5 }}
       </td>
     </tr>
+    {% endif %}
+    {% if proyecto.nombre_act_6 %}
     <tr>
       <td>6</td>
       <td>
         {{ proyecto.nombre_act_6 }}
+      </td>
+      <td>
+        {{ proyecto.resp_act_6 }}
       </td>
       <td>
         {{ proyecto.fecha_entrega_act_6 }}
@@ -139,10 +214,15 @@
         {{ proyecto.porc_avan_act_6 }}
       </td>
     </tr>
+    {% endif %}
+    {% if proyecto.nombre_act_7 %}
     <tr>
       <td>7</td>
       <td>
         {{ proyecto.nombre_act_7 }}
+      </td>
+      <td>
+        {{ proyecto.resp_act_7 }}
       </td>
       <td>
         {{ proyecto.fecha_entrega_act_7 }}
@@ -154,10 +234,15 @@
         {{ proyecto.porc_avan_act_7 }}
       </td>
     </tr>
+    {% endif %}
+    {% if proyecto.nombre_act_8 %}
     <tr>
       <td>8</td>
       <td>
         {{ proyecto.nombre_act_8 }}
+      </td>
+      <td>
+        {{ proyecto.resp_act_8 }}
       </td>
       <td>
         {{ proyecto.fecha_entrega_act_8 }}
@@ -169,10 +254,15 @@
         {{ proyecto.porc_avan_act_8 }}
       </td>
     </tr>
+    {% endif %}
+    {% if proyecto.nombre_act_9 %}
     <tr>
       <td>9</td>
       <td>
         {{ proyecto.nombre_act_9 }}
+      </td>
+      <td>
+        {{ proyecto.resp_act_9 }}
       </td>
       <td>
         {{ proyecto.fecha_entrega_act_9 }}
@@ -184,10 +274,15 @@
         {{ proyecto.porc_avan_act_9 }}
       </td>
     </tr>
+    {% endif %}
+    {% if proyecto.nombre_act_10 %}
     <tr>
       <td>10</td>
       <td>
         {{ proyecto.nombre_act_10 }}
+      </td>
+      <td>
+        {{ proyecto.resp_act_10 }}
       </td>
       <td>
         {{ proyecto.fecha_entrega_act_10 }}
@@ -199,6 +294,107 @@
         {{ proyecto.porc_avan_act_10 }}
       </td>
     </tr>
+    {% endif %}
+    {% if proyecto.nombre_act_11 %}
+    <tr>
+      <td>11</td>
+      <td>
+        {{ proyecto.nombre_act_11 }}
+      </td>
+      <td>
+        {{ proyecto.resp_act_11 }}
+      </td>
+      <td>
+        {{ proyecto.fecha_entrega_act_11 }}
+      </td>
+      <td>
+        {{ proyecto.porc_act_11 }}
+      </td>
+      <td>
+        {{ proyecto.porc_avan_act_11 }}
+      </td>
+    </tr>
+    {% endif %}
+    {% if proyecto.nombre_act_12 %}
+    <tr>
+      <td>12</td>
+      <td>
+        {{ proyecto.nombre_act_12 }}
+      </td>
+      <td>
+        {{ proyecto.resp_act_12 }}
+      </td>
+      <td>
+        {{ proyecto.fecha_entrega_act_12 }}
+      </td>
+      <td>
+        {{ proyecto.porc_act_12 }}
+      </td>
+      <td>
+        {{ proyecto.porc_avan_act_12 }}
+      </td>
+    </tr>
+    {% endif %}
+    {% if proyecto.nombre_act_13 %}
+    <tr>
+      <td>13</td>
+      <td>
+        {{ proyecto.nombre_act_13 }}
+      </td>
+      <td>
+        {{ proyecto.resp_act_13 }}
+      </td>
+      <td>
+        {{ proyecto.fecha_entrega_act_13 }}
+      </td>
+      <td>
+        {{ proyecto.porc_act_13 }}
+      </td>
+      <td>
+        {{ proyecto.porc_avan_act_13 }}
+      </td>
+    </tr>
+    {% endif %}
+    {% if proyecto.nombre_act_14 %}
+    <tr>
+      <td>14</td>
+      <td>
+        {{ proyecto.nombre_act_14 }}
+      </td>
+      <td>
+        {{ proyecto.resp_act_14 }}
+      </td>
+      <td>
+        {{ proyecto.fecha_entrega_act_14 }}
+      </td>
+      <td>
+        {{ proyecto.porc_act_14 }}
+      </td>
+      <td>
+        {{ proyecto.porc_avan_act_14 }}
+      </td>
+    </tr>
+    {% endif %}
+    {% if proyecto.nombre_act_15 %}
+    <tr>
+      <td>15</td>
+      <td>
+        {{ proyecto.nombre_act_15 }}
+      </td>
+      <td>
+        {{ proyecto.resp_act_15 }}
+      </td>
+      <td>
+        {{ proyecto.fecha_entrega_act_15 }}
+      </td>
+      <td>
+        {{ proyecto.porc_act_15 }}
+      </td>
+      <td>
+        {{ proyecto.porc_avan_act_15 }}
+      </td>
+    </tr>
+    {% endif %}
   </tbody>
 </table>
 <br />
