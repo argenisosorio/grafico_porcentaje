@@ -6,6 +6,7 @@ from registro import views
 urlpatterns = patterns('',
     url(r'^$', views.Consultar.as_view(), name='consultar'),
     url(r'^registrar$', views.Registrar.as_view(), name='registrar'),
+    url(r'^registrar_software$', views.Registrar_software.as_view(), name='registrar_software'),
     url(r'^editar/(?P<pk>\d+)$', views.Editar.as_view(), name='editar'),
     url(r'^borrar/(?P<pk>\d+)$', views.Borrar.as_view(), name='borrar'),
     url(r'^detallar/(?P<pk>\d+)$', views.Detallar.as_view(), name='detallar'),

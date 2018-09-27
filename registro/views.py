@@ -7,6 +7,10 @@ from registro.models import Proyecto
 from forms import ProyectoForm
 
 
+##################################################
+##### CRUD de la Gestión básica de Proyectos #####
+##################################################
+
 class Consultar(ListView):
     """
     Clase que permite listar los proyectos.
@@ -19,6 +23,16 @@ class Registrar(CreateView):
     Clase que permite registrar un proyecto.
     """
     model = Proyecto
+    form_class = ProyectoForm
+    success_url = reverse_lazy('registro:consultar')
+
+
+class Registrar_software(CreateView):
+    """
+    Clase que permite registrar un proyecto de tipo Software.
+    """
+    model = Proyecto
+    template_name = "registro/proyecto_software_form.html"
     form_class = ProyectoForm
     success_url = reverse_lazy('registro:consultar')
 

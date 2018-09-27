@@ -1,0 +1,499 @@
+{% extends "registro/base.html" %}
+{% block titulo %}Registrar proyecto de Software{% endblock %}
+{% block cuerpo %}
+<h1>Registrar proyecto de Software</h1>
+<br />
+<form method="post">{% csrf_token %}
+
+  <div class="row">
+    <div class="col-sm-6">
+        <b>Nombre del Proyecto</b>
+      <input class="form-control input-md" id="id_nombre_proyecto" name="nombre_proyecto" required="True" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Nombre del Director</b>
+      <input class="form-control input-md" id="id_nombre_director" name="nombre_director" required="True" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Fecha de entrega</b>
+      <input class="form-control input-md" id="id_fecha_entrega_proyecto" name="fecha_entrega_proyecto" required="True" style="min-width: 0; width: 100%; display: inline;" type="text" />
+      
+    </div>
+    <div class="col-sm-6">
+      <b>Año de ejecución</b>
+      <input class="form-control input-md" id="id_ano_ejecucion" name="ano_ejecucion" required="True" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Nombre del Cara Visible</b>
+      <input class="form-control input-md" id="id_nombre_caravisible" name="nombre_caravisible" required="True" style="min-width: 0; width: 100%; display: inline;" type="text" />
+      
+    </div>
+  </div>
+
+  <br />
+
+  <b>Integrantes del equipo</b>
+  <input class="form-control input-md" id="id_integrantes_equipo" name="integrantes_equipo" required="True" style="min-width: 0; width: 100%; display: inline;" type="text" />
+  
+
+  <br />
+  <br />
+
+  <div class="row">
+    <div class="col-sm-4">
+      <b>Nombre de la Actividad 1</b>
+      <input class="form-control input-md" id="id_nombre_act_1" name="nombre_act_1" value="Conceptualización" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Nombre de la Actividad 2</b>
+      <input class="form-control input-md" id="id_nombre_act_2" name="nombre_act_2" value="Elaboración del Plan del proyecto" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Nombre de la Actividad 3</b>
+      <input class="form-control input-md" id="id_nombre_act_3" name="nombre_act_3" value="Definición de Estándares de desarrollo" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Nombre de la Actividad 4</b>
+      <input class="form-control input-md" id="id_nombre_act_4" name="nombre_act_4" value="Instalación de la Plataforma de gestión del proyecto" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Nombre de la Actividad 5</b>
+      <input class="form-control input-md" id="id_nombre_act_5" name="nombre_act_5" value="Especificación de requerimientos" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Nombre de la Actividad 6</b>
+      <input class="form-control input-md" id="id_nombre_act_6" name="nombre_act_6" value="Especificación de arquitectura de la aplicación" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Nombre de la Actividad 7</b>
+      <input class="form-control input-md" id="id_nombre_act_7" name="nombre_act_7" value="Diseño del Prototipo no funcional" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Nombre de la Actividad 8</b>
+      <input class="form-control input-md" id="id_nombre_act_8" name="nombre_act_8" value="Codificación de las funcionalidades" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Nombre de la Actividad 9</b>
+      <input class="form-control input-md" id="id_nombre_act_9" name="nombre_act_9" value="Aplicación de las pruebas (funcionales, no funcionales, seguridad y rendimiento según sea el caso)" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Nombre de la Actividad 10</b>
+      <input class="form-control input-md" id="id_nombre_act_10" name="nombre_act_10" value="Elaboración de manuales" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Nombre de la Actividad 11</b>
+      <input class="form-control input-md" id="id_nombre_act_11" name="nombre_act_11" value="Empaquetado del software" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Nombre de la Actividad 12</b>
+      <input class="form-control input-md" id="id_nombre_act_12" name="nombre_act_12" value="Publicación" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Nombre de la Actividad 13</b>
+      <input class="form-control input-md" id="id_nombre_act_13" name="nombre_act_13" value="Procesos de Apropiación" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Nombre de la Actividad 14</b>
+      <input class="form-control input-md" id="id_nombre_act_14" name="nombre_act_14" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Nombre de la Actividad 15</b>
+      <input class="form-control input-md" id="id_nombre_act_15" name="nombre_act_15" style="min-width: 0; width: 100%; display: inline;" type="text" />
+      
+    </div>
+    <div class="col-sm-2">
+      <b>Responsable de la Actividad 1</b>
+      <input class="form-control input-md" id="id_resp_act_1" name="resp_act_1" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Responsable de la Actividad 2</b>
+      <input class="form-control input-md" id="id_resp_act_2" name="resp_act_2" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Responsable de la Actividad 3</b>
+      <input class="form-control input-md" id="id_resp_act_3" name="resp_act_3" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Responsable de la Actividad 4</b>
+      <input class="form-control input-md" id="id_resp_act_4" name="resp_act_4" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Responsable de la Actividad 5</b>
+      <input class="form-control input-md" id="id_resp_act_5" name="resp_act_5" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Responsable de la Actividad 6</b>
+      <input class="form-control input-md" id="id_resp_act_6" name="resp_act_6" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Responsable de la Actividad 7</b>
+      <input class="form-control input-md" id="id_resp_act_7" name="resp_act_7" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Responsable de la Actividad 8</b>
+      <input class="form-control input-md" id="id_resp_act_8" name="resp_act_8" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Responsable de la Actividad 9</b>
+      <input class="form-control input-md" id="id_resp_act_9" name="resp_act_9" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Responsable de la Actividad 10</b>
+      <input class="form-control input-md" id="id_resp_act_10" name="resp_act_10" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Responsable de la Actividad 11</b>
+      <input class="form-control input-md" id="id_resp_act_11" name="resp_act_11" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Responsable de la Actividad 12</b>
+      <input class="form-control input-md" id="id_resp_act_12" name="resp_act_12" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Responsable de la Actividad 13</b>
+      <input class="form-control input-md" id="id_resp_act_13" name="resp_act_13" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Responsable de la Actividad 14</b>
+      <input class="form-control input-md" id="id_resp_act_14" name="resp_act_14" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Responsable de la Actividad 15</b>
+      <input class="form-control input-md" id="id_resp_act_15" name="resp_act_15" style="min-width: 0; width: 100%; display: inline;" type="text" />
+      
+    </div>
+    <div class="col-sm-2">
+      <b>Fecha de entrega de la Actividad 1</b>
+      <input class="form-control input-md" id="id_fecha_entrega_act_1" name="fecha_entrega_act_1" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Fecha de entrega de la Actividad 2</b>
+      <input class="form-control input-md" id="id_fecha_entrega_act_2" name="fecha_entrega_act_2" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Fecha de entrega de la Actividad 3</b>
+      <input class="form-control input-md" id="id_fecha_entrega_act_3" name="fecha_entrega_act_3" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Fecha de entrega de la Actividad 4</b>
+      <input class="form-control input-md" id="id_fecha_entrega_act_4" name="fecha_entrega_act_4" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Fecha de entrega de la Actividad 5</b>
+      <input class="form-control input-md" id="id_fecha_entrega_act_5" name="fecha_entrega_act_5" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Fecha de entrega de la Actividad 6</b>
+      <input class="form-control input-md" id="id_fecha_entrega_act_6" name="fecha_entrega_act_6" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Fecha de entrega de la Actividad 7</b>
+      <input class="form-control input-md" id="id_fecha_entrega_act_7" name="fecha_entrega_act_7" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Fecha de entrega de la Actividad 8</b>
+      <input class="form-control input-md" id="id_fecha_entrega_act_8" name="fecha_entrega_act_8" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Fecha de entrega de la Actividad 9</b>
+      <input class="form-control input-md" id="id_fecha_entrega_act_9" name="fecha_entrega_act_9" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Fecha de entrega de la Actividad 10</b>
+      <input class="form-control input-md" id="id_fecha_entrega_act_10" name="fecha_entrega_act_10" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Fecha de entrega de la Actividad 11</b>
+      <input class="form-control input-md" id="id_fecha_entrega_act_11" name="fecha_entrega_act_11" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Fecha de entrega de la Actividad 12</b>
+      <input class="form-control input-md" id="id_fecha_entrega_act_12" name="fecha_entrega_act_12" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Fecha de entrega de la Actividad 13</b>
+      <input class="form-control input-md" id="id_fecha_entrega_act_13" name="fecha_entrega_act_13" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Fecha de entrega de la Actividad 14</b>
+      <input class="form-control input-md" id="id_fecha_entrega_act_14" name="fecha_entrega_act_14" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Fecha de entrega de la Actividad 15</b>
+      <input class="form-control input-md" id="id_fecha_entrega_act_15" name="fecha_entrega_act_15" style="min-width: 0; width: 100%; display: inline;" type="text" />
+      
+    </div>
+    <div class="col-sm-2">
+      <b>Porcentaje de la Actividad 1</b>
+      <input class="form-control input-md" id="id_porc_act_1" name="porc_act_1" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Porcentaje de la Actividad 2</b>
+      <input class="form-control input-md" id="id_porc_act_2" name="porc_act_2" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Porcentaje de la Actividad 3</b>
+      <input class="form-control input-md" id="id_porc_act_3" name="porc_act_3" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Porcentaje de la Actividad 4</b>
+      <input class="form-control input-md" id="id_porc_act_4" name="porc_act_4" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Porcentaje de la Actividad 5</b>
+      <input class="form-control input-md" id="id_porc_act_5" name="porc_act_5" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Porcentaje de la Actividad 6</b>
+      <input class="form-control input-md" id="id_porc_act_6" name="porc_act_6" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Porcentaje de la Actividad 7</b>
+      <input class="form-control input-md" id="id_porc_act_7" name="porc_act_7" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Porcentaje de la Actividad 8</b>
+      <input class="form-control input-md" id="id_porc_act_8" name="porc_act_8" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Porcentaje de la Actividad 9</b>
+      <input class="form-control input-md" id="id_porc_act_9" name="porc_act_9" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Porcentaje de la Actividad 10</b>
+      <input class="form-control input-md" id="id_porc_act_10" name="porc_act_10" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Porcentaje de la Actividad 11</b>
+      <input class="form-control input-md" id="id_porc_act_11" name="porc_act_11" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Porcentaje de la Actividad 12</b>
+      <input class="form-control input-md" id="id_porc_act_12" name="porc_act_12" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Porcentaje de la Actividad 13</b>
+      <input class="form-control input-md" id="id_porc_act_13" name="porc_act_13" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Porcentaje de la Actividad 14</b>
+      <input class="form-control input-md" id="id_porc_act_14" name="porc_act_14" style="min-width: 0; width: 100%; display: inline;" type="text" />
+
+      <br />
+      <br />
+
+      <b>Porcentaje de la Actividad 15</b>
+      <input class="form-control input-md" id="id_porc_act_15" name="porc_act_15" style="min-width: 0; width: 100%; display: inline;" type="text" />
+      
+    </div>
+    <div class="col-sm-2">
+      <b>Porcentaje de avance la Actividad 1</b>
+      <input class="form-control input-md" id="id_porc_avan_act_1" name="porc_avan_act_1" style="min-width: 0; width: 100%; display: inline;" type="text" value="0" />
+
+      <br />
+      <br />
+
+      <b>Porcentaje de avance la Actividad 2</b>
+      <input class="form-control input-md" id="id_porc_avan_act_2" name="porc_avan_act_2" style="min-width: 0; width: 100%; display: inline;" type="text" value="0" />
+
+      <br />
+      <br />
+
+      <b>Porcentaje de avance la Actividad 3</b>
+      <input class="form-control input-md" id="id_porc_avan_act_3" name="porc_avan_act_3" style="min-width: 0; width: 100%; display: inline;" type="text" value="0" />
+
+      <br />
+      <br />
+
+      <b>Porcentaje de avance la Actividad 4</b>
+      <input class="form-control input-md" id="id_porc_avan_act_4" name="porc_avan_act_4" style="min-width: 0; width: 100%; display: inline;" type="text" value="0" />
+
+      <br />
+      <br />
+
+      <b>Porcentaje de avance la Actividad 5</b>
+      <input class="form-control input-md" id="id_porc_avan_act_5" name="porc_avan_act_5" style="min-width: 0; width: 100%; display: inline;" type="text" value="0" />
+
+      <br />
+      <br />
+
+      <b>Porcentaje de avance la Actividad 6</b>
+      <input class="form-control input-md" id="id_porc_avan_act_6" name="porc_avan_act_6" style="min-width: 0; width: 100%; display: inline;" type="text" value="0" />
+
+      <br />
+      <br />
+
+      <b>Porcentaje de avance la Actividad 7</b>
+      <input class="form-control input-md" id="id_porc_avan_act_7" name="porc_avan_act_7" style="min-width: 0; width: 100%; display: inline;" type="text" value="0" />
+
+      <br />
+      <br />
+
+      <b>Porcentaje de avance la Actividad 8</b>
+      <input class="form-control input-md" id="id_porc_avan_act_8" name="porc_avan_act_8" style="min-width: 0; width: 100%; display: inline;" type="text" value="0" />
+
+      <br />
+      <br />
+
+      <b>Porcentaje de avance la Actividad 9</b>
+      <input class="form-control input-md" id="id_porc_avan_act_9" name="porc_avan_act_9" style="min-width: 0; width: 100%; display: inline;" type="text" value="0" />
+
+      <br />
+      <br />
+
+      <b>Porcentaje de avance la Actividad 10</b>
+      <input class="form-control input-md" id="id_porc_avan_act_10" name="porc_avan_act_10" style="min-width: 0; width: 100%; display: inline;" type="text" value="0" />
+
+      <br />
+      <br />
+
+      <b>Porcentaje de avance la Actividad 11</b>
+      <input class="form-control input-md" id="id_porc_avan_act_11" name="porc_avan_act_11" style="min-width: 0; width: 100%; display: inline;" type="text" value="0" />
+
+      <br />
+      <br />
+
+      <b>Porcentaje de avance la Actividad 12</b>
+      <input class="form-control input-md" id="id_porc_avan_act_12" name="porc_avan_act_12" style="min-width: 0; width: 100%; display: inline;" type="text" value="0" />
+
+      <br />
+      <br />
+
+      <b>Porcentaje de avance la Actividad 13</b>
+      <input class="form-control input-md" id="id_porc_avan_act_13" name="porc_avan_act_13" style="min-width: 0; width: 100%; display: inline;" type="text" value="0" />
+
+      <br />
+      <br />
+
+      <b>Porcentaje de avance la Actividad 14</b>
+      <input class="form-control input-md" id="id_porc_avan_act_14" name="porc_avan_act_14" style="min-width: 0; width: 100%; display: inline;" type="text" value="0" />
+
+      <br />
+      <br />
+
+      <b>Porcentaje de avance la Actividad 15</b>
+      <input class="form-control input-md" id="id_porc_avan_act_15" name="porc_avan_act_15" style="min-width: 0; width: 100%; display: inline;" type="text" value="0" />
+      
+    </div>
+  </div>
+  <br />
+  <br />
+  <button class="btn btn-success" type="submit">Guardar</button>
+</form>
+{% endblock %}
